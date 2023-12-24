@@ -21,7 +21,7 @@ app.use((req, res, next) => {
         main();
         async function imTired() {
             try {
-                const response = await axios.get(`http://localhost/output_${moment().format('YYYYMMDD')}_${moment(time, 'HH').format('HH')}.json`);
+                const response = await axios.get(`http://localhost/output_${moment().format(time, 'YYYYMMDD').format('YYYYMMDD')}.json`);
                 if (response.status === 200) {
                     // Assign the response data directly
                     fuck = response.data;
